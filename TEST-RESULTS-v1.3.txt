@@ -1,0 +1,24 @@
+Alhadbaa Pharmacy Manager v1.3 — Verification Results
+
+Automated source/calculation checks: 13/13 passed
+
+Verified:
+- JavaScript syntax validation
+- Currency formatting: 1,234 IQD
+- Zero currency formatting: 0 IQD
+- Supplier payment calculation: 500,000 + 3% = 515,000 IQD
+- Net report calculation: profit - expenses - advances - withdrawals
+- English and Arabic report labels
+- English and Arabic navigation dictionaries
+- Daily sales/profit/withdrawal chart-series merge
+- Date-range filtering
+- Combined chart creates two series
+- Chart tooltips preserve Western digits and IQD
+- Required application files and PWA assets exist
+
+Manual checks recommended after upload:
+- Open with VS Code Live Server
+- Switch English / Arabic on every page
+- Add one sample record to each module
+- Open Reports and change From / To dates
+- Confirm iPhone layout through GitHub Pages

@@ -1,0 +1,23 @@
+Alhadbaa Pharmacy Manager v1.2 test results
+Date: 2026-07-31
+
+PASS - JavaScript syntax validation
+PASS - Application startup and dashboard rendering
+PASS - Logo/header rendering
+PASS - Add daily sales
+PASS - Edit daily sales
+PASS - Duplicate-date validation present
+PASS - Supplier payment and 3% final-value calculation
+PASS - Add expenses
+PASS - Add employee advances
+PASS - Add owner withdrawals
+PASS - Date-range report totals
+PASS - Search records
+PASS - Delete records
+PASS - Dark mode
+PASS - Mobile sidebar open/close/navigation
+PASS - Manifest JSON validation
+PASS - iPhone and PWA icon dimensions
+PASS - Offline service-worker assets configured
+
+No JavaScript page errors occurred during the functional browser test.

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Alhadbaa Pharmacy logo</title>
+  <desc id="desc">A modern pharmacy emblem combining a protective arch, mortar bowl, and medical cross.</desc>
+  <defs>
+    <linearGradient id="g" x1="36" y1="24" x2="218" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2aa876"/>
+      <stop offset="1" stop-color="#157453"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#082a43" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="#173a5e"/>
+  <path d="M41 127c0-52 35-93 87-104 52 11 87 52 87 104 0 49-34 89-87 108-53-19-87-59-87-108Z" fill="url(#g)" filter="url(#s)"/>
+  <path d="M83 135h90c0 31-18 51-45 51s-45-20-45-51Z" fill="#fff"/>
+  <path d="M91 126h74" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M137 72h-18v20H99v18h20v20h18v-20h20V92h-20V72Z" fill="#fff"/>
+  <path d="M92 198h72" stroke="#dff7ed" stroke-width="10" stroke-linecap="round" opacity=".95"/>
+</svg>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#173a5e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Alhadbaa" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <title>Alhadbaa Pharmacy Manager</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><img src="assets/alhadbaa-logo.svg" alt="Alhadbaa Pharmacy logo" /></div>
+        <div><strong data-i18n="brandName">Alhadbaa</strong><span data-i18n="brandSubtitle">Pharmacy Manager</span></div>
+      </div>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard" data-i18n="nav.dashboard">Dashboard</button>
+        <button class="nav-item" data-page="sales" data-i18n="nav.sales">Daily Sales</button>
+        <button class="nav-item" data-page="payments" data-i18n="nav.payments">Supplier Payments</button>
+        <button class="nav-item" data-page="expenses" data-i18n="nav.expenses">Expenses</button>
+        <button class="nav-item" data-page="advances" data-i18n="nav.advances">Employee Advances</button>
+        <button class="nav-item" data-page="withdrawals" data-i18n="nav.withdrawals">Owner Withdrawals</button>
+        <button class="nav-item" data-page="reports" data-i18n="nav.reports">Reports</button>
+        <button class="nav-item" data-page="backup" data-i18n="nav.backup">Backup & Restore</button>
+      </nav>
+      <div class="sidebar-footer" data-i18n="storedDevice">Data is stored on this device.</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="title-block"><h1 id="pageTitle">Dashboard</h1><p id="pageSubtitle">Financial overview of your pharmacy</p></div>
+        <div class="top-actions">
+          <button class="language-btn" id="languageBtn" type="button" aria-label="Switch language">العربية</button>
+          <button class="icon-btn" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode">◐</button>
+          <button class="primary-btn" id="quickAddBtn" data-i18n="quickAdd">+ Quick add</button>
+        </div>
+      </header>
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head"><h2 id="modalTitle">Add record</h2><button class="icon-btn" id="closeModal" aria-label="Close">×</button></div>
+      <form id="recordForm"></form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
