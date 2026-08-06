@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alhadbaa-v1.4.1';
+const CACHE_NAME = 'alhadbaa-v1.4.3';
 const APP_SHELL = [
   './',
   './index.html',

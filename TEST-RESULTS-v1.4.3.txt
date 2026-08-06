@@ -1,0 +1,20 @@
+# Test Results — v1.4.3
+
+## Double-check pass
+- JavaScript syntax validated with `node --check`.
+- Spreadsheet-style reports render successfully.
+- Excel export generator returns HTML table content.
+- CSV export generator returns quoted CSV output.
+- Currency formatting remains `1,234 IQD`.
+- English/Arabic switching updates document direction to `ltr` / `rtl`.
+- Arabic interface keeps Western digits and the `IQD` suffix.
+- Dashboard no longer shows the sentence "Automatically calculated".
+- Report totals match the generated rows in the calculation tests.
+
+## Calculation sample verified
+- Sales: 1,000 IQD
+- Payment: 500 IQD with 3% bonus = 515 IQD
+- Expenses: 100 IQD
+- Advances: 50 IQD
+- Withdrawals: 70 IQD
+- Net cash flow: 1,000 - 515 - 100 - 50 - 70 = 265 IQD
