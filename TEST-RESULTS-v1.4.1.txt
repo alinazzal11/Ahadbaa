@@ -1,0 +1,9 @@
+Alhadbaa Pharmacy Manager v1.4.1 — Verification
+
+PASS: JavaScript syntax validation.
+PASS: English and Arabic translation objects load.
+PASS: Dashboard no longer renders the automatic-calculation sentence.
+PASS: Arabic readability stylesheet targets navigation, headings, forms, tables, charts and mobile layout.
+PASS: Arabic mode preserves left-to-right Western financial formatting such as 1,234 IQD.
+PASS: Service-worker cache identifier updated to alhadbaa-v1.4.1.
+PASS: Required application, manifest, icon and offline files are present.

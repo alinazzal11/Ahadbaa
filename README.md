@@ -1,8 +1,8 @@
-# Alhadbaa Pharmacy Manager v1.3
+# Alhadbaa Pharmacy Manager v1.4.1
 
 A lightweight offline-first pharmacy financial manager built with HTML, CSS and JavaScript.
 
-## Version 1.3 highlights
+## Version 1.4.1 highlights
 - Instant English / Arabic language switch
 - Full right-to-left Arabic interface
 - Language preference saved on the device

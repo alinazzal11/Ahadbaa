@@ -6,7 +6,7 @@ const LANGUAGE_KEY = 'alhadbaa_language';
 const I18N = {
   en: {
     brandName: 'Alhadbaa', brandSubtitle: 'Pharmacy Manager', storedDevice: 'Data is stored on this device.',
-    quickAdd: '+ Quick add', switchLanguage: 'العربية', automatic: 'Automatically calculated',
+    quickAdd: '+ Quick add', switchLanguage: 'العربية',
     nav: { dashboard:'Dashboard', sales:'Daily Sales', payments:'Supplier Payments', expenses:'Expenses', advances:'Employee Advances', withdrawals:'Owner Withdrawals', reports:'Reports', backup:'Backup & Restore' },
     pages: {
       dashboard:['Dashboard','Financial overview of your pharmacy'], sales:['Daily Sales','Enter the pharmacy closing totals'],
@@ -27,7 +27,7 @@ const I18N = {
   },
   ar: {
     brandName: 'الحدباء', brandSubtitle: 'إدارة الصيدلية', storedDevice: 'تُحفظ البيانات على هذا الجهاز.',
-    quickAdd: '+ إضافة سريعة', switchLanguage: 'English', automatic: 'يُحتسب تلقائياً',
+    quickAdd: '+ إضافة سريعة', switchLanguage: 'English',
     nav: { dashboard:'لوحة التحكم', sales:'المبيعات اليومية', payments:'تسديدات المجهزين', expenses:'المصاريف', advances:'سلف الموظفين', withdrawals:'السحوبات الشخصية', reports:'التقارير', backup:'النسخ والاستعادة' },
     pages: {
       dashboard:['لوحة التحكم','نظرة مالية عامة على الصيدلية'], sales:['المبيعات اليومية','أدخل إجماليات إغلاق الصيدلية'],
@@ -91,7 +91,7 @@ function renderDashboard(){
   const d=state.data,today=dateToday(),month=monthKey(),todays=d.sales.find(x=>x.date===today)||{},monthSales=d.sales.filter(x=>x.date.startsWith(month));
   const metrics=[['dashboard.todaySales',todays.sales],['dashboard.todayProfit',todays.profit],['dashboard.monthlySales',sum(monthSales,'sales')],['dashboard.monthlyProfit',sum(monthSales,'profit')],['dashboard.payments',sum(d.payments,'finalAmount')],['dashboard.expenses',sum(d.expenses,'amount')],['dashboard.advances',sum(d.advances,'amount')],['dashboard.withdrawals',sum(d.withdrawals,'amount')]];
   const recent=[...d.sales].sort((a,b)=>a.date.localeCompare(b.date)).slice(-10),max=Math.max(...recent.map(x=>Number(x.sales)),1);
-  $('#content').innerHTML=`<div class="kpi-grid">${metrics.map(m=>`<div class="card kpi"><span>${t(m[0])}</span><strong class="money-value">${money(m[1])}</strong><small>${t('automatic')}</small></div>`).join('')}</div><div class="layout-grid"><div class="card panel"><div class="panel-head"><h2>${t('dashboard.trend')}</h2><button class="secondary-btn" data-go="sales">${t('dashboard.viewSales')}</button></div><div class="chart">${recent.length?recent.map(x=>`<div class="bar-wrap"><div class="bar" style="height:${Math.max(4,Number(x.sales)/max*210)}px"></div>${x.date.slice(5)}</div>`).join(''):`<div class="empty">${t('dashboard.addSalesChart')}</div>`}</div></div><div class="card panel"><div class="panel-head"><h2>${t('dashboard.recentActivity')}</h2></div><div class="activity">${d.activity.length?d.activity.slice(0,7).map(a=>`<div class="activity-item"><strong>${esc(activityText(a))}</strong><small>${new Date(a.time).toLocaleString(state.language==='ar'?'ar-IQ-u-nu-latn':'en-US-u-nu-latn')}</small></div>`).join(''):`<div class="empty">${t('dashboard.noActivity')}</div>`}</div></div></div>`;
+  $('#content').innerHTML=`<div class="kpi-grid">${metrics.map(m=>`<div class="card kpi"><span>${t(m[0])}</span><strong class="money-value">${money(m[1])}</strong></div>`).join('')}</div><div class="layout-grid"><div class="card panel"><div class="panel-head"><h2>${t('dashboard.trend')}</h2><button class="secondary-btn" data-go="sales">${t('dashboard.viewSales')}</button></div><div class="chart">${recent.length?recent.map(x=>`<div class="bar-wrap"><div class="bar" style="height:${Math.max(4,Number(x.sales)/max*210)}px"></div>${x.date.slice(5)}</div>`).join(''):`<div class="empty">${t('dashboard.addSalesChart')}</div>`}</div></div><div class="card panel"><div class="panel-head"><h2>${t('dashboard.recentActivity')}</h2></div><div class="activity">${d.activity.length?d.activity.slice(0,7).map(a=>`<div class="activity-item"><strong>${esc(activityText(a))}</strong><small>${new Date(a.time).toLocaleString(state.language==='ar'?'ar-IQ-u-nu-latn':'en-US-u-nu-latn')}</small></div>`).join(''):`<div class="empty">${t('dashboard.noActivity')}</div>`}</div></div></div>`;
   document.querySelector('[data-go]')?.addEventListener('click',e=>navigate(e.currentTarget.dataset.go));
 }
 

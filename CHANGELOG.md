@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.1 — Arabic UI and dashboard cleanup
+
+- Increased Arabic font weight, size, line height, and table readability.
+- Improved Arabic navigation, forms, cards, charts, and mobile typography.
+- Kept financial values in the fixed `1,234 IQD` format in both languages.
+- Removed “Automatically calculated” and its Arabic equivalent from dashboard cards.
+- Updated the offline cache version so installed devices receive the new release.
+
 ## v1.3.0
 - Added complete English and Arabic interface translations.
 - Added instant language switching and saved language preference.
